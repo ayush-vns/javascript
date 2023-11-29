@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop</title>
+    <script>
+        var n = 0;
+        var loop;
+
+        function startCount() {
+            loop = setInterval(f, 500);
+        }
+
+        function f() {
+            n++;
+            document.getElementById("output").innerHTML = n;
+            if (n >= 10) {
+                document.getElementById("d").style.display = "block";
+                clearInterval(loop);
+                document.getElementById("e").style.display = "block";
+                clearInterval(loop);
+                
+            }
+           
+        }
+    </script>
+    <style>
+        .outpuet {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left: 30%;
+            top: 30%;
+            border-style: ridge;
+            border-color: red;
+            border-width: 5px;
+            display: none;
+            background-color: bisque;
+            box-shadow: 10px 10px 10px gray;
+            display: none;
+        }
+        .outpuetq {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left: 10%;
+            top: 30%;
+            border-style: ridge;
+            border-color: green;
+            border-width: 5px;
+            display: none;
+            background-color: bisque;
+            box-shadow: 10px 10px 10px gray;
+            display: none;
+        }
+       .xp
+       {
+        position: absolute;
+        left: 90%;
+        top: -16px;
+       }
+
+        
+    </style>
+</head>
+
+<body>
+   
+   
+        <div id="d" class="outpuet"><p id="output"></p>
+            <p class="xp">X</p>
+        </div>
+        <div id="e" class="outpuetq"></p>
+            <p class="xp">X</p>
+        </div>
+       
+    
+    
+    <br />
+    
+
+    <input type="button" value="Start Counting" onclick="startCount()">
+    <script>
+        startCount();
+    </script>
+</body>
+
+</html>

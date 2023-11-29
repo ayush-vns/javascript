@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change
+
+    </title>
+    <script>
+        var x = 1;
+        var n = 0;
+        var loop;
+        var leftpos = 0;
+        var toppos = 0;
+
+
+        function startcount() {
+            loop = setInterval(f, 10);
+        }
+
+
+        function f1() {
+            n++;
+
+            document.getElementById("d").style.top = leftpos + "px";
+            leftpos = leftpos + x;
+
+            if (leftpos > 700) {
+                // x = -x;
+
+                clearInterval(loop);
+            }
+
+
+
+        }
+
+
+        function f() {
+            n++;
+
+            document.getElementById("d").style.left = leftpos + "px";
+            leftpos = leftpos + x;
+            if (leftpos > 700) {
+                // x = -x;
+                leftpos=0;
+
+                clearInterval(loop);
+                loop = setInterval(f1, 10);
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+        .outpuet {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left: 10%;
+            top: 0%;
+            border-style: ridge;
+            border-color: red;
+            background-color: bisque;
+            box-shadow: 10px 10px 10px gray;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d" class="outpuet">div </div>
+    <input style="z-index: 90;" type="button" value="Start" onclick="startcount()"><br>
+
+
+
+
+
+
+
+</body>
+
+</html>

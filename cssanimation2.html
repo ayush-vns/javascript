@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        div {
+            width: 100px;
+            height: 100px;
+            /* background-color: red; */
+            animation-name: example;
+            animation-duration: 5s;
+            /* animation-delay: 5s; */
+            animation-iteration-count: 1;
+            /* opacity: 0; */
+            position: absolute;
+            /* animation-direction: alternate; */
+            top: 0%;
+            left: 0%;
+            
+            animation-fill-mode: both;
+        }
+
+        @keyframes example {
+    0% {
+        /* background-color: red; */
+       top: 0%;
+       left: 0%;
+    }
+    100% {
+        /* background-color: blue; */
+        top: 0%;
+        left: 48.9%;
+        /* opacity: 1; */
+    }
+}
+         .div2{
+            width: 100px;
+            height: 100px;
+            background-color: gree;
+            animation-name: example2;
+            animation-duration: 5s;
+            /* animation-delay: 5s; */
+            animation-iteration-count: 1;
+            /* opacity: 0; */
+            position: absolute;
+            /* animation-direction: alternate; */
+            top: 0%;
+            right: 0%;
+            
+            animation-fill-mode: both;
+        }
+
+        @keyframes example2 {
+    0% {
+        /* background-color: red; */
+       top: 0%;
+       right: 0%;
+    }
+    100% {
+        /* background-color: green; */
+        top: 0%;
+        right: 50%;
+        /* opacity: 1; */
+    }
+}
+
+        
+       
+    </style>
+</head>
+
+<body>
+
+    <!-- <h1>CSS Animation</h1> -->
+
+    <div>
+        <img src="pics/images.jpeg" alt="" srcset="">
+    </div>
+   <div2 class="div2">
+    <img src="pics/images4(2).jpeg" alt="" srcset="">
+   </div2>
+
+    <!-- <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p> -->
+
+</body>
+
+</html>

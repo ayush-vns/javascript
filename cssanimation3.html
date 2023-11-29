@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img {
+
+            width: 700px;
+            height: 700px;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            /* background-color: red; */
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            text-align: center;
+            /* animation-delay: 2s; */
+
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        @keyframes example {
+            0% {
+                /* background-color: blue; */
+                opacity: 0;
+            }
+
+            100% {
+                /* background-color: blue; */
+                opacity: 1;
+
+
+
+            }
+        }
+
+        .tb {
+            width: 300px;
+            height: 100px;
+            /* background-color: red; */
+            animation-name: example2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            text-align: center;
+            /* opacity: 0%; */
+            /* animation-delay: 2s; */
+
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        @keyframes example2 {
+            0% {
+                /* background-color: blue; */
+                opacity: 1;
+            }
+
+            100% {
+                /* background-color: blue; */
+                opacity: 0;
+
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <h1>CSS Animation</h1> -->
+
+    <div>
+        <img src="pics/1.jpg" alt="" srcset="" height="330px">
+    </div>
+    <div2 class="tb">
+        <img src="pics/2.jpg" alt="" srcset="" height="330px">
+    </div2>
+
+
+
+</body>
+
+</html>

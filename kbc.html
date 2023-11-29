@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC</title>
+    <script>
+        let qno = 0;
+        let questions = [" Who was the first law minister of independent India ?", " Who opened the first school for girls in India?", " Who was the first Indian woman to become a pilot?", "In which year did the massacre of Jallianwala Bagh occur?"];
+        let options =  [
+            ["Bhimrao Ramji Ambedkar", "Arjun Ram Meghwal", "Kailash Nath Katju", "Charu Chandra Biswas"],
+            ["Savitribai Phule", "sarojini naidu", "mother teresa", "none of these"],
+            ["ncsnsck", "option A text 3", "option B text 3", "option C text 3"],
+            ["ncsnsck", "option A text 4", "option B text 4", "option C text 4"]
+    ];
+        function question() {
+            if (qno >= 4) {
+                console.log("end");
+                return;
+            }
+            document.getElementById("qno").innerHTML = questions[qno];
+            document.getElementById("opt_A").innerHTML = options[qno][0];
+            document.getElementById("opt_B").innerHTML = options[qno][1];
+            document.getElementById("opt_C").innerHTML = options[qno][2];
+            document.getElementById("opt_D").innerHTML = options[qno][3];
+            document.getElementById("def").Checked=true;
+            qno += 1;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <table border="2">
+            <tr>
+                <td colspan="5">KBC</td>
+                <td rowspan="10">
+                    <table>
+
+                        <tr>
+                            <td>15 -</td>
+                            <td>₹ 7 crore</td>
+                        </tr>
+                        <tr>
+                            <td>14 -</td>
+                            <td>₹ 5 crore</td>
+                        </tr>
+                        <tr>
+                            <td>13 -</td>
+                            <td>₹ 3 crore</td>
+                        </tr>
+                        <tr>
+                            <td>12 -</td>
+                            <td>₹ 1 crore</td>
+                        </tr>
+                        <tr>
+                            <td>11 -</td>
+                            <td>₹ 50 lakh</td>
+                        </tr>
+                        <tr>
+                            <td>10 -</td>
+                            <td>₹ 25 lakh</td>
+                        </tr>
+                        <tr>
+                            <td>9 -</td>
+                            <td>₹ 12,50,000</td>
+                        </tr>
+                        <tr>
+                            <td>8 -</td>
+                            <td>₹ 6,40,000</td>
+                        </tr>
+                        <tr>
+                            <td>7 -</td>
+                            <td>₹ 3,20,000</td>
+                        </tr>
+                        <tr>
+                            <td>6 -</td>
+                            <td>₹ 1,60,000</td>
+                        </tr>
+                        <tr>
+                            <td>5 -</td>
+                            <td>₹ 80,000</td>
+                        </tr>
+                        <tr>
+                            <td>4 -</td>
+                            <td>₹ 40,000</td>
+                        </tr>
+                        <tr>
+                            <td>3 -</td>
+                            <td>₹ 20,000</td>
+                        </tr>
+                        <tr>
+                            <td>2 -</td>
+                            <td>₹ 10,000</td>
+                        </tr>
+                        <tr>
+                            <td>1 -</td>
+                            <td>₹ 5,000</td>
+                        </tr>
+    
+    
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="20">
+                    question
+                    <p id="qno"></p>
+                </td>
+            </tr>
+            <tr>
+                <td><input name="answer" type="radio" value="a" id="opt_A"></td>
+                <td><input name="answer" type="radio" value="b"><label id="opt_B"></label></td>
+            </tr>
+            <tr>
+                <td><input name="answer" type="radio" value="c"><label id="opt_C"></label></td>
+                <td><input name="answer" type="radio" value="d"><label id="opt_D"></label></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button id="onclick" type="button" onclick="question()">submit</button></td>
+            </tr>
+        </table>
+        <input name="answer" type="radio" value="a" id="def">
+    </center>
+</body>
+</html>

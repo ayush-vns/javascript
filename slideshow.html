@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+<title>setInterval, Clear Interval, Slide Show</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://3.bp.blogspot.com/-py5FbTZgvjo/YDi1bsQq16I/AAAAAAAACB0/BxejbJBcHA4AVfkB33WYC3YlVmxElM7BwCK4BGAYYCw/s1600/Varanasi%2BSoftware%2BJunction%2BPhone%2BLogo.png">
+   
+ <script>
+var n=0;
+var loop;
+
+function startShow()
+{
+loop=setInterval(f,2000);
+}	
+function f()
+{
+n=(n+1) % 3;
+document.getElementById("img").src="pics/" + n + ".jpg";
+
+}
+function stopShow()
+{
+clearInterval(loop);
+}	
+ </script>
+</head>
+<body>
+ <img id="img" src="pics/deccanherald_import_sites_dh_files_articleimages_2022_03_13_varanasi-istock-1089941-1647123121.avif"/><br/>
+ 
+ <input type="button" value="Start Show" onclick="startShow()"><br/>
+ <input type="button" value="Stop Show" onclick="stopShow()"><br/>
+ 
+</body>
+</html>

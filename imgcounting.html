@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n=0;
+        var loop;
+        var width=600;
+        function startCount()
+        {
+            loop=setInterval(f,50)
+            ;
+        }
+        function f()
+        {
+            n++;
+            document.getElementById("output").innerHTML=n;
+            document.getElementById("img").style.width=width+"px";
+            width=width-1;
+            if(width<=0)
+            width=600;
+        }
+        function stopCount(){
+            clearInterval(loop);
+        }
+    </script>
+</head>
+<body>
+    <img style="width: 600px;" width="600px" id="img" src="pics/1.jpg" alt="">
+    output<div id="output"></div><br>
+    <input type="button" value="Start" onclick="startCount()"><br>
+    <input type="button" value="Stop" onclick="stopCount()"><br>
+</body>
+</html>

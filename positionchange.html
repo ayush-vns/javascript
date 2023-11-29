@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change
+
+    </title>
+    <script>
+        var x=1;
+        var n=0;
+        var loop;
+        var leftpos=0;
+        var left2pos=300;
+        var left3pos=600;
+        function startcount()
+        {
+            loop=setInterval(f,10);
+        }
+
+        function f(){
+            // n=(n+1)%10 ;
+           
+            document.getElementById("d").style.left=leftpos+"px";
+            document.getElementById("e").style.left=left2pos+"px";
+            document.getElementById("f").style.left=left3pos+"px";
+            leftpos=(leftpos+x) % 1300;
+            left2pos=(left2pos+x) % 1300;
+            left3pos=(left3pos+x) % 1300;
+       
+        }
+       
+
+        
+        
+        
+    </script>
+    <style>
+        .outpuet {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left: 14%;
+            top: 30%;
+            border-style: ridge;
+            border-color: red; 
+            background-color: bisque;
+            box-shadow: 10px 10px 10px gray;
+            
+        }
+        .yup {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border-style: ridge;
+            border-color: green;
+            background-color: bisque;
+            box-shadow: 10px 10px 10px gray;
+            
+        }
+        .tup {
+            position: absolute;
+            width: 10%;
+            height: 40%;
+            left:56%;
+            top: 30%;
+            border-style: ridge;
+            border-color: blue;
+            background-color: lightblue;
+            box-shadow: 10px 10px 10px gray;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Start" onclick="startcount()"><br>
+
+    <div id="d" class="outpuet">div </div>
+    <div id="e" class="yup">div </div>
+    <div id="f" class="tup">div </div>
+   
+   
+
+    
+</body>
+</html>

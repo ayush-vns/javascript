@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>setInterval, Clear Interval</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"
+        href="https://3.bp.blogspot.com/-py5FbTZgvjo/YDi1bsQq16I/AAAAAAAACB0/BxejbJBcHA4AVfkB33WYC3YlVmxElM7BwCK4BGAYYCw/s1600/Varanasi%2BSoftware%2BJunction%2BPhone%2BLogo.png">
+
+    <script>
+        var n = 0;
+        var loop;
+
+        function startCount() {
+            loop = setInterval(f, 500);
+        }
+        function f() {
+            n++;
+            document.getElementById("output").innerHTML = n;
+            if (n >= 30)
+                document.getElementById("output").style.display = "block";
+
+        }
+        function stopCount() {
+            clearInterval(loop);
+        }	
+    </script>
+    <style>
+        #output {
+            width: 400px;
+            height: 400px;
+            border-style: ridge;
+            border-color: red;
+            border-width: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">
+        Output
+
+
+    </div><br />
+
+    <input type="button" value="Start Counting" onclick="startCount()"><br />
+    <input type="button" value="Stop Counting" onclick="stopCount()"><br />
+    <script>
+
+        startCount();
+    </script>
+</body>
+
+</html>
